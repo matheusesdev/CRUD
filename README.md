@@ -23,7 +23,7 @@ Este projeto, desenvolvido como parte do curso de programação web oferecido pe
 # Como utilizar
 
  1. Clone o repositório para o seu ambiente local.
-`` git clone https://github.com/seu-usuario/CRUD.git
+`` git clone https://github.com/matheusesdev/CRUD.git
 ``
  
  2. Abra o arquivo index.html em seu navegador web.

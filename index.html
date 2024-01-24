@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD DE PRODUTOS</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script type="module" src="./js/app.js"></script>
+<link rel="shortcut icon" href="./imgs/racao-para-animais-de-estimacao.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Meus Produtos Online</h1>
+
+<form id="productForm">
+    <label for="productName">Nome do Produto:</label>
+    <input type="text" id="productName">
+    <label for="productPrice">Preço do Produto:</label>
+    <input type="number" id="productPrice">
+    <label for="productQtd">Quantidade do Produto:</label>
+    <input type="number" id="productQtd">
+
+    <button type="submit"><i class="fa-solid fa-plus"></i>  Adicionar o Produto</button>
+</form>
+
+<table id="productTable">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome do Produto</th>
+            <th>Preço do Produto</th>
+            <th>Quantidade em Estoque</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Conteúdo da Tabela que será preenchido dinâmicamente via JavaScript. -->
+    </tbody>
+</table>
+<div id="updateModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <h2>Editar Produto</h2>
+        <form id="updateForm">
+            <label for="updateProductName">Nome do Produto:</label>
+            <input type="text" id="updateProductName">
+
+            <label for="updateProductPrice">Preço do Produto:</label>
+            <input type="text" id="updateProductPrice">
+
+            <label for="updateProductQtd">Quantidade em Estoque:</label>
+            <input type="number" id="updateProductQtd">
+            
+
+            <button type="button" id="updateProductBtn"><i class="fa-solid fa-pen"></i> Atualizar Produto</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

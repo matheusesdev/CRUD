@@ -1,44 +1,39 @@
-Título: CRUD de Produtos
-Descrição
-Esse é um projeto criado durante o curso de Programação Web fornecido pelo IFBA de Vitória da Conquista.
 
-Tecnologias
-As seguintes tecnologias foram usadas nesse projeto:
+   # CRUD de Produtos
 
-HTML
-CSS
-JavaScript
 
-Instalação
-Para instalar esse projeto, siga estas etapas:
+# Descrição
+Este projeto, desenvolvido como parte do curso de programação web oferecido pelo Instituto Federal de Educação, Ciência e Tecnologia da Bahia (IFBA), consiste em um sistema básico para realizar operações CRUD (Create, Read, Update, Delete) em produtos. As tecnologias principais utilizadas durante o desenvolvimento foram HTML, CSS e JavaScript.
 
-Clone o repositório em sua máquina local usando o seguinte comando:
-Copy code
-$ git clone https://github.com/matheusesdev/crud.git
-Navegue até o diretório do projeto:
-Copy code
-$ cd projeto-de-exemplo
-Instale as dependências usando o seguinte comando:
-Copy code
-$ npm install
-Uso
-Para usar esse projeto, siga estas etapas:
+# Tecnologias Utilizadas
+- HTML: Utilizado para estruturação e marcação do conteúdo da aplicação.
+- CSS: Responsável pela estilização e aparência visual da aplicação.
+- JavaScript: Utilizado para a lógica de programação.
 
-Execute o seguinte comando para iniciar o servidor local:
-Copy code
-$ npm start
-Abra um navegador web e acesse http://localhost:3000 para ver o projeto em ação.
-Contribuição
-Se você quiser contribuir para esse projeto, siga estas etapas:
+# Funcionalidades
+- **Cadastro de Produtos**: adição de novos produtos, incluindo informações como nome, descrição, preço, etc.
 
-Crie uma branch para sua feature:
-Copy code
-$ git checkout -b minha-feature
-Faça suas alterações e faça commit nelas:
-Copy code
-$ git add .
-$ git commit -m "Minha feature"
-Envie sua branch para o repositório remoto:
-Copy code
-$ git push origin minha-feature
-Abra um pull request no repositório remoto.
+- **Visualização de Produtos**: listagem de todos os produtos cadastrados para visualização.
+
+- **Atualização de Produtos**: edição dos dados de produtos existentes.
+
+- **Exclusão de Produtos**: remoção de produtos do sistema.
+
+
+# Como utilizar
+
+ 1. Clone o repositório para o seu ambiente local.
+`` git clone https://github.com/seu-usuario/CRUD.git
+``
+ 
+ 2. Abra o arquivo index.html em seu navegador web.
+
+ 3. Explore as funcionalidades do CRUD de Produtos.
+
+# Contribuição
+Se encontrar algum problema ou tiver sugestões para melhorar o projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request. Sua contribuição é muito bem-vinda!
+
+
+`` 
+Desenvolvido por [Matheus Santos] - [matheuses18@icloud.com]
+`` 

@@ -1,0 +1,18 @@
+/* app config */
+.app {
+  display: flex;
+}
+
+
+/* app config end */
+
+
+
+
+.main {
+  padding: 20px 50px;
+  width: 100dvw;
+  height: 100dvh;
+  color: #000;
+  border: 1px solid red;
+}

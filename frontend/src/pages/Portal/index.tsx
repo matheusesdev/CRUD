@@ -28,6 +28,14 @@ const Portal: React.FC = () => {
               <h3>Card 1</h3>
               <p>Card 1 description</p>
             </div>
+            <div className={styles.card}>
+              <h3>Card 1</h3>
+              <p>Card 1 description</p>
+            </div>
+            <div className={styles.card}>
+              <h3>Card 1</h3>
+              <p>Card 1 description</p>
+            </div>
           </div>
         </div>
 

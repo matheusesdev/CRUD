@@ -9,73 +9,97 @@
   flex-direction: column;
   gap: 30px;
 
-  .sidebarHeader {
-    display: flex;
-    justify-content: center;
-    /* border: 1px solid red; */
-  }
+}
 
-  .sidebarBody {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0;
-    /* border: 1px solid red; */
-
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      /* border: 1px solid blue; */
-
-      .divider {
-        content: "";
-        width: 80%;
-        height: 1px;
-        background-color: rgba(255,255,255,1);
-      }
-
-      li {
-        display: flex;
-        justify-content: center;
-        /* align-items: center; */
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        width: 80%;
-        
-
-        &:hover {
-          background-color: rgba(255,255,255,0.3);
-        }
-
-        a {
-          color: #fff;
-          text-decoration: none;
-          width: 100%;
-          display: flex;
-          /* align-items: center; */
-          justify-content: center;
-        }
-      }
-    }
-
-
-
-  }
-
+.sidebarHeader {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
 }
 
 
 
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  
+  width: 100%;
+  height: 500px;
+  /* border: 1px solid blue; */
+  
+}
+
+.divider {
+  content: "";
+  width: 80%;
+  height: 1px;
+  margin: 5px 0;
+  background-color: rgba(255,255,255,1);
+}
+
+.navItem {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  /* height: 40px; */
+}
+
+.navItem button {
+  border: none;
+  /* border-left: 5px red solid; */
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 0;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  
+
+  .navItem button:hover {
+    background-color: rgba(255,255,255,0.3);
+  }
+
+
+  .active {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: center;
+    /* justify-content: end; */
+    gap: 10px;
+  }
+
+
+  button {
+    border: none;
+    border-left: 5px red solid;
+    background-color: white;
+    color: #000;
+    text-decoration: none;
+    width: 240px;
+    border-radius: 0;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 
 

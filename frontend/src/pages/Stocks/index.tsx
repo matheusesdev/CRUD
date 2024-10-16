@@ -7,7 +7,7 @@ const Stocks: React.FC = () => {
     <div className={styles.app}>
       <Sidebar />
       <div className={styles.main}>
-
+        
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 /* sidebar  */
 
 .sidebar {
@@ -8,7 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-
+  
 }
 
 .sidebarHeader {
@@ -59,13 +61,15 @@
   /* border-left: 5px red solid; */
   background-color: transparent;
   color: #ffffff;
-  text-decoration: none;
   width: 100%;
   border-radius: 0;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-size: 16px;
 }
 
 
@@ -84,11 +88,17 @@
     justify-content: center;
     /* justify-content: end; */
     gap: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 0;
   }
 
 
-  button {
+  .buttonNav {
     border: none;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 16px;
     border-left: 5px red solid;
     background-color: white;
     color: #000;

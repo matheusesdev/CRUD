@@ -25,8 +25,8 @@ const Portal: React.FC = () => {
         <div className={styles.dashboards}>
           <div className={styles.cards}>
             <div className={styles.card}>
-              <h3>Card 1</h3>
-              <p>Card 1 description</p>
+              <h3>0</h3>
+              <p>Produtos em estoque</p>
             </div>
             <div className={styles.card}>
               <h3>Card 1</h3>

@@ -7,6 +7,13 @@ export const Sidebar: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    localStorage.removeItem('authToken');
+    sessionStorage.removeItem('authToken');
+
+    navigate('/login');
+  };
+
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebarHeader}>
@@ -14,18 +21,25 @@ export const Sidebar: React.FC = () => {
       </div>
       
       <ul className={styles.nav}>
-        <li className={location.pathname === '/portal' ? styles.active : styles.navItem}>
-            <button onClick={() => navigate('/portal')} className={styles.buttonNav}>Home</button>
-        </li>
-        <div className={styles.divider}/>
-        <li className={location.pathname === '/products' ? styles.active : styles.navItem}>
-          <button onClick={() => navigate('/products')} className={styles.buttonNav}>Products</button>  
-        </li>
-        <div className={styles.divider}/>
-        <li className={location.pathname === '/stocks' ? styles.active : styles.navItem}>
-          <button onClick={() => navigate("/stocks")} className={styles.buttonNav}>Stocks</button>
-        </li>
+        <div className={styles.list}>
+          <li className={location.pathname === '/portal' ? styles.active : styles.navItem}>
+              <button onClick={() => navigate('/portal')} className={styles.buttonNav}>Home</button>
+          </li>
+          <div className={styles.divider}/>
+          <li className={location.pathname === '/products' ? styles.active : styles.navItem}>
+            <button onClick={() => navigate('/products')} className={styles.buttonNav}>Products</button>  
+          </li>
+          <div className={styles.divider}/>
+          <li className={location.pathname === '/shop' ? styles.active : styles.navItem}>
+            <button onClick={() => navigate("/shop")} className={styles.buttonNav}>Shop</button>
+          </li>
+        </div>
+        
+        <button onClick={handleLogout} className={styles.buttonLogout}>Logout</button>
       </ul>
+      
+      
+      
     </div>
         
   

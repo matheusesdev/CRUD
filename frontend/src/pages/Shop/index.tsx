@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Stocks.module.css';
 import { Sidebar } from '../../components/Sidebar';
 
-const Stocks: React.FC = () => {
+const Shop: React.FC = () => {
   return (
     <div className={styles.app}>
       <Sidebar />
@@ -13,4 +13,4 @@ const Stocks: React.FC = () => {
   );
 };
 
-export default Stocks;
+export default Shop;

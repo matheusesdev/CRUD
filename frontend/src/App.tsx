@@ -6,7 +6,7 @@ import Portal from './pages/Portal';
 import Products from './pages/Products'; 
 import Loja from './pages/Loja'; 
 import './App.css';
-import Stocks from './pages/Stocks';
+import Shop from './pages/Shop';
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
         <Route path="/portal" element={<Portal />} />
         <Route path="/loja" element={<Loja />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/stocks" element={<Stocks />} />
+        <Route path="/shop" element={<Shop />} />
       </Routes>
     </Router>
   );

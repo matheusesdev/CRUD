@@ -1,24 +1,45 @@
 import React, { useState } from 'react';
 import styles from './Login.module.css';
-// import 'bootstrap-icons/font/bootstrap-icons.css';
-// import '@fortawesome/fontawesome-free/css/all.css';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const navigate = useNavigate();
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value);
   const handleRememberMeChange = (e: React.ChangeEvent<HTMLInputElement>) => setRememberMe(e.target.checked);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log({ email, password, rememberMe });
-  };
+    setError(null);
 
-  const faleConosco = () => {
-    window.location.href = '/faleconosco';
+    try {
+      const response = await axios.post('http://localhost:3000/api/users/login', { email, password });
+
+      if (response.status === 200) {
+        const token = response.data.token;
+
+        // Armazena o token no localStorage ou sessionStorage
+        if (rememberMe) {
+          localStorage.setItem('authToken', token);
+        } else {
+          sessionStorage.setItem('authToken', token);
+        }
+
+        // Redirecionar para o portal
+        navigate('/portal');
+      } else {
+        setError('Erro ao fazer login. Verifique suas credenciais.');
+      }
+    } catch (err) {
+      setError('Erro ao fazer login. Verifique suas credenciais.');
+    }
   };
 
   return (
@@ -30,8 +51,7 @@ const Login = () => {
         <div className={styles['first-column']}>
           <h2 className={`${styles.title} ${styles['title-primary']}`}>Olá!</h2>
           <p className={`${styles.description} ${styles['description-primary']}`}>Você ainda não possui cadastro?</p>
-          <p className={`${styles.description} ${styles['description-primary']}`}>Entre já em contato conosco</p>
-          <button onClick={faleConosco} className={`${styles.btn} ${styles['btn-primary']}`}>Fale Conosco</button>
+          <button onClick={() => navigate(`/cadastro`)} className={`${styles.btn} ${styles['btn-primary']}`}>Cadastre-se</button>
         </div>
 
         <div className={styles['second-column']}>
@@ -71,6 +91,7 @@ const Login = () => {
               <span className={styles.checkmark}></span>
             </label>
             <a className={styles.password} href="/redef">Esqueceu sua senha?</a>
+            {error && <p className={styles.error}>{error}</p>}
             <button type="submit" className={`${styles.btn} ${styles['btn-second']}`}>
               Login
             </button>

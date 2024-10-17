@@ -1,12 +1,22 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import bodyParser from 'body-parser';
+import productRoutes from './routes/productRoutes';
+import userRoutes from './routes/userRoutes';
+import cors from 'cors';
+
 
 const app = express();
-const PORT = 3001;
+const port = 3000;
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello from the TypeScript backend!');
-});
+app.use(bodyParser.json());
+app.use(cors({
+  origin: 'http://localhost:5173',
+}));
 
-app.listen(PORT, () => {
-  console.log(`Backend is running on http://localhost:${PORT}`);
+// Usando as rotas de produto
+app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes)
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
 });
